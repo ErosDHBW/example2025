@@ -1,9 +1,0 @@
-spring:
-    main:
-        banner-mode: "off"
-
-my-app:
-    welcome-text: "Hello"
-    default-user:
-        name: "Admin"
-        role: "admin"
