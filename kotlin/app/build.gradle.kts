@@ -39,7 +39,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass.set("de.erosdhbw.AppKt")
+    mainClass.set("de.pizzabot.AppKt")
 }
 
 tasks.named<Test>("test") {
