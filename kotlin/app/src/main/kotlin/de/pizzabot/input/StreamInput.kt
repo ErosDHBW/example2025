@@ -35,15 +35,10 @@ class StreamInput(private val display: Display, inputStream: InputStream) : Inpu
         display.display("$text [$exitId=$exitDescription, $choicesDisplay]")
     }
 
-    private fun <I> findMatchingChoice(choices: Collection<Choice<I>>, input: String?): Choice<I>? {
-        return if (input != null) {
-            choices.find { c -> c.id == input }
-        } else {
-            null
-        }
-    }
+    private fun <I> findMatchingChoice(choices: Collection<Choice<I>>, input: String): Choice<I>? =
+        choices.find { c -> c.id == input }
 
-    private fun <I> inputValid(choices: Collection<Choice<I>>, input: String?): Boolean =
+    private fun <I> inputValid(choices: Collection<Choice<I>>, input: String): Boolean =
         findMatchingChoice(choices, input) != null || isExit(input)
 
     private fun isExit(id: String?) = id != null && id == exitId
