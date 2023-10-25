@@ -38,4 +38,9 @@ class OrderTest {
         // assert
         assertThat(result, equalTo("Pizza: Margerita on Standard dough; Extras: "))
     }
+
+    @Test
+    fun `Stringify a Salami Pizza with Cheesy Crust and Mozzarella`() {
+        TODO("Not yet implemented")
+    }
 }

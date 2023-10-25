@@ -12,8 +12,7 @@ class StreamDisplay(outputStream: OutputStream) : Display {
     }
 
     override fun displayMenuItem(name: String, price: Double) {
-        val paddedName = String.format("%1$-20s", name)
-        out.println("-- $paddedName | $price")
+        TODO("Not implemented yes")
     }
 
     override fun displayPreparationStep(preparable: Preparable) {
